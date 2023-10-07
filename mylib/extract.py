@@ -2,8 +2,8 @@
 Extract a dataset from a URL. 
 JSON or CSV formats tend to work well
 """
-import os
-import requests
+# import os
+# import requests
 
 
 import os
