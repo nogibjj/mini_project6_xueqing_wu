@@ -46,4 +46,4 @@ transform_load:
 	python main.py transform_load
 
 query:
-	python main.py general_query "SELECT * FROM Birth WHERE Year='2000';"
+	python main.py general_query "Select Year, Month, Day_Of_Month, sum(births) as The_Number_of_Birth FROM birth1 INNER JOIN birth2 ON birth1.id = birth2.id Group By Year, Month, Day_Of_Month ORDER BY The_Number_of_Birth Desc LIMIT 10"
