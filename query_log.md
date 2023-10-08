@@ -192,3 +192,15 @@ Select Year, Month, Day_Of_Month, sum(births) as The_Number_of_Birth FROM birth1
 [Row(Year=2000, Month=1, Day_Of_Month=4, The_Number_of_Birth=13032), Row(Year=2000, Month=1, Day_Of_Month=11, The_Number_of_Birth=12611), Row(Year=2000, Month=1, Day_Of_Month=25, The_Number_of_Birth=12593), Row(Year=2000, Month=1, Day_Of_Month=5, The_Number_of_Birth=12558), Row(Year=2000, Month=1, Day_Of_Month=7, The_Number_of_Birth=12516), Row(Year=2000, Month=1, Day_Of_Month=20, The_Number_of_Birth=12506), Row(Year=2000, Month=1, Day_Of_Month=6, The_Number_of_Birth=12466), Row(Year=2000, Month=1, Day_Of_Month=27, The_Number_of_Birth=12408), Row(Year=2000, Month=1, Day_Of_Month=19, The_Number_of_Birth=12405), Row(Year=2000, Month=1, Day_Of_Month=12, The_Number_of_Birth=12398)]
 ```
 
+```sql
+Select  Year, Month, 	Day_Of_Month,  sum(births) as The_Number_of_Birth
+            FROM birth1 INNER JOIN birth2 ON birth1.id = birth2.id
+            Group By Year, Month, Day_Of_Month
+            ORDER BY The_Number_of_Birth Desc
+            LIMIT 10
+```
+
+```response from databricks
+[Row(Year=2000, Month=1, Day_Of_Month=4, The_Number_of_Birth=13032), Row(Year=2000, Month=1, Day_Of_Month=11, The_Number_of_Birth=12611), Row(Year=2000, Month=1, Day_Of_Month=25, The_Number_of_Birth=12593), Row(Year=2000, Month=1, Day_Of_Month=5, The_Number_of_Birth=12558), Row(Year=2000, Month=1, Day_Of_Month=7, The_Number_of_Birth=12516), Row(Year=2000, Month=1, Day_Of_Month=20, The_Number_of_Birth=12506), Row(Year=2000, Month=1, Day_Of_Month=6, The_Number_of_Birth=12466), Row(Year=2000, Month=1, Day_Of_Month=27, The_Number_of_Birth=12408), Row(Year=2000, Month=1, Day_Of_Month=19, The_Number_of_Birth=12405), Row(Year=2000, Month=1, Day_Of_Month=12, The_Number_of_Birth=12398)]
+```
+

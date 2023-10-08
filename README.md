@@ -1,7 +1,7 @@
-[![CI](https://github.com/nogibjj/xueqing_wu_mini_project5/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/xueqing_wu_mini_project5/actions/workflows/cicd.yml)
+[![CI](https://github.com/nogibjj/mini_project6_xueqing_wu/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/mini_project6_xueqing_wu/actions/workflows/cicd.yml)
 
 ## Purpose
-The goal of this project is to create a database on the cloud using Azure Databricks. Create data pipelin (ETL) and write query (including join, aggregation, and sorting).
+The goal of this project is to create a database and query the data on the cloud using Azure Databricks. Create data pipelin (ETL) and write query (including join, aggregation, and sorting).
 
 Dataset source: Birth data from github (https://github.com/fivethirtyeight/data)
 
@@ -10,7 +10,7 @@ Birth data: https://github.com/fivethirtyeight/data/blob/master/births/US_births
 The data is splitted into 2 datasets by splitting the column in order to join the datasets later
 
 ## Items Included
-1. external data (birth data)
+1. external data (birth data, split1 & split2)
 1. mylib
     1. extract.py
     1. transform_load.py
@@ -19,14 +19,18 @@ The data is splitted into 2 datasets by splitting the column in order to join th
 
 ## Steps
 1. Find the data on Github
-1. Extract: import the data in extract.py from Github
+1. Upload data to Databricks
+1. Connect Github with Databricks
+    Connect Azure Databricks with Github with authentication (server hostname, http path, and access token). Those 3 secret variables need to be hidden from the public by adding new repository to secrets and variables
+1. Extract: import the data in extract.py 
 1. Transform and load: clean and load the data by creating a database and a table
-1. Query: query the data including join, aggregate and sort
+1. Query: getting the top 10 days that have the most number of births (using join, aggregate, and sort)
 1. Update the Makefile 
+1. Update yml file by adding "set up environment variables"
 
 ## Workflow
 ![Workflow](Graphs/Workflow.png)
 
 ## Tests
-![Tests](Graphs/Test.png)
+<img width="952" alt="Test" src="https://github.com/nogibjj/mini_project6_xueqing_wu/assets/47194238/13d3dfc8-a0ca-4540-afef-cfa7f1207bee">
 
