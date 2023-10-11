@@ -19,12 +19,15 @@ The data is splitted into 2 datasets by splitting the column in order to join th
 
 ## Steps
 1. Find the data on Github
-1. Upload data to Databricks
 1. Connect Github with Databricks
-    Connect Azure Databricks with Github with authentication (server hostname, http path, and access token). Those 3 secret variables need to be hidden from the public by adding new repository to secrets and variables
-1. Extract: import the data in extract.py 
-1. Transform and load: clean and load the data by creating a database and a table
-1. Query: getting the top 10 days that have the most number of births (using join, aggregate, and sort)
+    1. Connect Azure Databricks with Github with authentication (server hostname, http path, and access token). Those 3 secret variables need to be hidden from the public by adding new repository to secrets and variables
+        1. adding server hostname, http path, and access token to .env file
+        1. add each repository secrets to secrets and variables on Github
+1. Upload data to Databricks
+1. ETL process:
+    1. Extract: import the data in extract.py 
+    1. Transform and load: clean and load the data by creating a database and a table
+    1. Query: getting the top 10 days that have the most number of births (using join, aggregate, and sort)
 1. Update the Makefile 
 1. Update yml file by adding "set up environment variables"
 
