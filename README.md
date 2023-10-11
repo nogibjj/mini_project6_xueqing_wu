@@ -32,7 +32,7 @@ The data is splitted into 2 datasets by splitting the column in order to join th
 1. Update yml file by adding "set up environment variables"
 
 ## Workflow
-![Workflow](Graphs/Workflow.png)
+<img width="981" alt="Workflow" src="https://github.com/nogibjj/mini_project6_xueqing_wu/assets/47194238/8075d9ea-c034-4b25-a12b-76f2c982b43d">
 
 ## Tests
 <img width="952" alt="Test" src="https://github.com/nogibjj/mini_project6_xueqing_wu/assets/47194238/13d3dfc8-a0ca-4540-afef-cfa7f1207bee">
